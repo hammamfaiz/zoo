@@ -17,7 +17,7 @@ export default function List() {
       .then((response) => response.json())
       .then((response) => setData(response))
       .catch((err) => console.error(err));
-  }, []);
+  });
 
   return (
     <section className="text-gray-600 body-font">

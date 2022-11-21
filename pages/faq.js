@@ -91,7 +91,7 @@ export default function FAQ() {
                     <span className="title-font font-medium text-gray-900">
                       Zoo Animals API
                     </span>
-                    <span className="text-gray-500 text-sm">UI DEVELOPER</span>
+                    <span className="text-gray-500 text-sm"></span>
                   </span>
                 </a>
               </div>

@@ -10,12 +10,9 @@ export default function Home() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    try {
-      setData(JSON.parse(router.query.data).data);
-    } catch (e) {
-      console.error(e);
-    }
-  });
+    if (!router.query.data) return;
+    setData(JSON.parse(router.query.data).data);
+  }, []);
 
   return (
     <div>
