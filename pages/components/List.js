@@ -13,11 +13,13 @@ export default function List() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://zoo-animals-api.p.rapidapi.com/animals/rand/10", options)
-      .then((response) => response.json())
-      .then((response) => setData(response))
-      .catch((err) => console.error(err));
-  });
+    setTimeout(() => {
+      fetch("https://zoo-animals-api.p.rapidapi.com/animals/rand/10", options)
+        .then((response) => response.json())
+        .then((response) => setData(response))
+        .catch((err) => console.error(err));
+    }, 250);
+  }, []);
 
   return (
     <section className="text-gray-600 body-font">
