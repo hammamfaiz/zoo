@@ -65,7 +65,7 @@ export default function ContactForm() {
         </div>
         <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
           <a className="text-indigo-500" href="mailto:hammamfaiz36@email.com">
-            hammamfaiz36@email.com
+            hammamfaiz36@gmail.com
           </a>
           <p className="leading-normal my-5">
             Kost Putra Salman
