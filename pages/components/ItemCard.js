@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ItemCard(props) {
   try {
     return (
-      <div className="xl:w-1/4 md:w-1/2 p-4">
+      <div className="xl:w-1/4 md:w-1/2 p-4 w-full">
         <Link
           href={{
             pathname: "/detail",
@@ -13,9 +13,9 @@ export default function ItemCard(props) {
             },
           }}
         >
-          <div className="bg-gray-100 p-6 rounded-lg">
+          <div className="bg-gray-100 p-6 rounded-lg w-full drop-shadow-lg">
             <Image
-              className="h-40 rounded w-full object-cover object-center mb-6"
+              className="h-40 rounded w-full object-cover mb-6"
               src={props.data.image_link}
               width="720"
               height="400"
@@ -24,10 +24,10 @@ export default function ItemCard(props) {
             <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">
               {props.data.latin_name}
             </h3>
-            <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
+            <h2 className="text-lg text-gray-900 font-medium title-font">
               {props.data.name}
             </h2>
-            <p className="leading-relaxed text-base">
+            <p className="leading-relaxed text-base line-clamp-1">
               Habitat: {props.data.habitat}
             </p>
           </div>

@@ -1,6 +1,6 @@
 import Meta from "./components/Meta";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import BottomNavigation from "./components/BottomNavigation";
 
 export default function References() {
   return (
@@ -10,7 +10,7 @@ export default function References() {
       <Header />
 
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-32 mx-auto">
+        <div className="container px-5 py-10 mx-auto">
           <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
               Data References
@@ -127,7 +127,7 @@ export default function References() {
         </div>
       </section>
 
-      <Footer />
+      <BottomNavigation />
     </div>
   );
 }

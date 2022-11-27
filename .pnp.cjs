@@ -29,6 +29,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@formspree/react", "npm:2.4.1"],\
+            ["@headlessui/react", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:1.7.4"],\
+            ["@tailwindcss/line-clamp", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:0.4.2"],\
             ["autoprefixer", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:10.4.13"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-next", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:13.0.4"],\
@@ -2251,6 +2253,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@headlessui/react", [\
+        ["npm:1.7.4", {\
+          "packageLocation": "./.yarn/cache/@headlessui-react-npm-1.7.4-73af72235e-cd7192aa07.zip/node_modules/@headlessui/react/",\
+          "packageDependencies": [\
+            ["@headlessui/react", "npm:1.7.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:1.7.4", {\
+          "packageLocation": "./.yarn/__virtual__/@headlessui-react-virtual-d0ac8fb6f8/0/cache/@headlessui-react-npm-1.7.4-73af72235e-cd7192aa07.zip/node_modules/@headlessui/react/",\
+          "packageDependencies": [\
+            ["@headlessui/react", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:1.7.4"],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["client-only", "npm:0.0.1"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@humanwhocodes/config-array", [\
         ["npm:0.11.7", {\
           "packageLocation": "./.yarn/cache/@humanwhocodes-config-array-npm-0.11.7-fa83ecd27f-cf506dc45d.zip/node_modules/@humanwhocodes/config-array/",\
@@ -2728,6 +2757,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@swc/helpers", "npm:0.4.11"],\
             ["tslib", "npm:2.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@tailwindcss/line-clamp", [\
+        ["npm:0.4.2", {\
+          "packageLocation": "./.yarn/cache/@tailwindcss-line-clamp-npm-0.4.2-7e8725ef00-26b8135df2.zip/node_modules/@tailwindcss/line-clamp/",\
+          "packageDependencies": [\
+            ["@tailwindcss/line-clamp", "npm:0.4.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:0.4.2", {\
+          "packageLocation": "./.yarn/__virtual__/@tailwindcss-line-clamp-virtual-a737b25023/0/cache/@tailwindcss-line-clamp-npm-0.4.2-7e8725ef00-26b8135df2.zip/node_modules/@tailwindcss/line-clamp/",\
+          "packageDependencies": [\
+            ["@tailwindcss/line-clamp", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:0.4.2"],\
+            ["@types/tailwindcss", null],\
+            ["tailwindcss", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:3.2.4"]\
+          ],\
+          "packagePeers": [\
+            "@types/tailwindcss",\
+            "tailwindcss"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8280,6 +8331,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["zoo", "workspace:."],\
             ["@formspree/react", "npm:2.4.1"],\
+            ["@headlessui/react", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:1.7.4"],\
+            ["@tailwindcss/line-clamp", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:0.4.2"],\
             ["autoprefixer", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:10.4.13"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-next", "virtual:b7eb3b2d7180b6990498394198d24c776886d4d45325b697423905e27a1c07e96834d8fb4445be616707e412a20ce3ccf73774dbc81cd64cb7b57fdcfadf19f3#npm:13.0.4"],\

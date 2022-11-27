@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Meta from "./components/Meta";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import BottomNavigation from "./components/BottomNavigation";
 
 export default function Home() {
   const router = useRouter();
@@ -21,9 +21,9 @@ export default function Home() {
       <Header />
 
       <section class="text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-8 items-center justify-center flex-col">
+        <div class="container mx-auto flex px-5 py-20 items-center justify-center flex-col">
           <Image
-            class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+            class="lg:w-1/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
             alt="cover"
             width="720"
             height="600"
@@ -36,15 +36,15 @@ export default function Home() {
             <p class="mb-8 leading-relaxed">
               {`${data ? data.name : ""} lives in the ${
                 data ? data.habitat : ""
-              } based in ${data ? data.geo_range : ""}. They can eat ${
-                data ? data.diet : ""
-              }`}
+              } based in ${data ? data.geo_range : ""}.`}
+              <br />
+              {` They can eat ${data ? data.diet : ""}`}
             </p>
           </div>
         </div>
       </section>
 
-      <Footer />
+      <BottomNavigation />
     </div>
   );
 }

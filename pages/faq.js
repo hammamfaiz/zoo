@@ -1,6 +1,6 @@
 import Meta from "./components/Meta";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import BottomNavigation from "./components/BottomNavigation";
 
 export default function FAQ() {
   return (
@@ -10,11 +10,11 @@ export default function FAQ() {
       <Header />
 
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-8 mx-auto">
+        <div className="container px-5 py-10 mx-auto">
           <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
             Frequently Asked Questions
           </h1>
-          <div className="flex flex-wrap -m-4">
+          <div className="flex flex-wrap -m-4 mb-14">
             <div className="p-4 md:w-1/2 w-full">
               <div className="h-full bg-gray-100 p-8 rounded">
                 <svg
@@ -176,7 +176,7 @@ export default function FAQ() {
         </div>
       </section>
 
-      <Footer />
+      <BottomNavigation />
     </div>
   );
 }

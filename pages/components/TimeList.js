@@ -9,14 +9,22 @@ const options = {
   },
 };
 
-export default function List() {
+export default function TimeList(props) {
   const [data, setData] = useState([]);
+
+  const activeTime = props.activeTime ? props.activeTime : "nocturnal";
 
   useEffect(() => {
     setTimeout(() => {
       fetch("https://zoo-animals-api.p.rapidapi.com/animals/rand/10", options)
         .then((response) => response.json())
-        .then((response) => setData(response))
+        .then((response) =>
+          setData(
+            response.filter(
+              (item) => item.active_time.toLowerCase() === activeTime
+            )
+          )
+        )
         .catch((err) => console.error(err));
     }, 250);
   }, []);
@@ -26,7 +34,7 @@ export default function List() {
       <div className="container px-5 py-6 mx-auto pb-24">
         <div className="flex flex-wrap -m-4">
           {data.length === 0 ? (
-            <p className="mx-auto text-center font-bold mt-10">Loading...</p>
+            <p className="mx-auto text-center font-bold mt-6">Loading...</p>
           ) : (
             data.map((item, index) => <ItemCard key={index} data={item} />)
           )}
