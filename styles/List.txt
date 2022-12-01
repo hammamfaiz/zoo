@@ -1,0 +1,68 @@
+import { useEffect, useState } from "react";
+import ItemCard from "./ItemCard";
+
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY,
+    "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_API_HOST,
+  },
+};
+
+export default function List() {
+  const [data, setData] = useState(null);
+  const [originalData, setOriginalData] = useState(null);
+  const [searchQuery, setSearchQuery] = useState(null);
+
+  useEffect(() => {
+    if (data !== null) return;
+    fetch(
+      "https://api.jsonbin.io/v3/b/6388238c003d6444ce5f84a6?meta=false",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => {
+        const result = response.slice(0, 99);
+        setData(result);
+        setOriginalData(result);
+      })
+      .catch((err) => console.error(err));
+  });
+
+  const handleSearchQuery = (event) => {
+    const query = event.target.value;
+    if (query === null || data === null) return;
+    setSearchQuery(query);
+    if (searchQuery === null) return;
+    setData(
+      originalData.filter((item) =>
+        item.name.toLowerCase().includes(query.toLowerCase())
+      )
+    );
+  };
+
+  return (
+    <section className="text-gray-600 body-font">
+      <div className="container px-5 py-8 mx-auto mb-20">
+        <div className="mb-8">
+          <input
+            type="text"
+            id="search"
+            name="search"
+            placeholder="Search fish..."
+            onChange={handleSearchQuery}
+            value={searchQuery}
+            class="w-full bg-white rounded border border-gray-300 text-base outline-none text-gray-600 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          />
+        </div>
+        <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
+          {data === null ? (
+            <p className="mx-auto text-center font-bold mt-2">Loading...</p>
+          ) : (
+            data.map((item, index) => <ItemCard key={index} data={item} />)
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
