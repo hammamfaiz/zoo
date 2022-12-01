@@ -16,7 +16,10 @@ export default function TimeList(props) {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch("https://zoo-animals-api.p.rapidapi.com/animals/rand/10", options)
+      fetch(
+        "https://api.jsonbin.io/v3/b/6388238c003d6444ce5f84a6?meta=false",
+        options
+      )
         .then((response) => response.json())
         .then((response) =>
           setData(
